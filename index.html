@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NexusAI — AI Consulting for Growing Businesses</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -160,6 +161,29 @@ textarea{resize:vertical;min-height:110px}
 .footer-logo span{color:var(--cyan)}
 .footer-copy{font-size:0.78rem;color:var(--muted)}
 
+/* ECOSYSTEM */
+.eco-wrap{padding:90px 5%;background:var(--bg)}
+.eco-inner{max-width:1140px;margin:0 auto}
+.eco-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border2);border:1px solid var(--border2);border-radius:var(--radius);overflow:hidden;margin-top:52px}
+.eco-col{display:flex;flex-direction:column;background:var(--bg2)}
+.eco-col-header{display:flex;align-items:center;gap:8px;padding:16px 18px;border-bottom:1px solid var(--border2);background:var(--surface)}
+.eco-col-header i{font-size:15px;color:var(--cyan)}
+.eco-col-header span{font-size:0.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em}
+.eco-items{display:flex;flex-direction:column;gap:1px;background:var(--border2);flex:1}
+.eco-item{display:flex;flex-direction:column;align-items:center;gap:8px;padding:18px 12px;background:var(--bg2);transition:background 0.25s;cursor:default}
+.eco-item:hover{background:var(--surface)}
+.eco-item:hover .eco-icon{border-color:rgba(0,229,255,0.35);color:var(--cyan)}
+.eco-icon{width:40px;height:40px;border:1px solid var(--border2);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;transition:all 0.25s;color:var(--muted)}
+.eco-icon i{font-size:20px}
+.eco-item-label{font-size:0.72rem;font-weight:500;color:var(--muted);text-align:center;line-height:1.3;transition:color 0.25s}
+.eco-item:hover .eco-item-label{color:var(--white)}
+.eco-note{margin-top:28px;text-align:center;font-size:0.8rem;color:var(--muted)}
+.eco-note span{color:var(--cyan)}
+
+@media(max-width:900px){
+  .eco-grid{grid-template-columns:repeat(3,1fr)}
+  .eco-col:nth-child(4),.eco-col:nth-child(5){border-top:1px solid var(--border2)}
+}
 @media(max-width:768px){
   .hero{grid-template-columns:1fr;gap:40px;padding:60px 5% 60px}
   .hero-visual{display:none}
@@ -172,6 +196,8 @@ textarea{resize:vertical;min-height:110px}
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
   .footer-inner{flex-direction:column;text-align:center}
+  .eco-grid{grid-template-columns:repeat(2,1fr)}
+  .eco-col:nth-child(n){border-top:1px solid var(--border2)}
 }
 </style>
 </head>
@@ -187,6 +213,7 @@ textarea{resize:vertical;min-height:110px}
       <li><a href="#pain">Challenges</a></li>
       <li><a href="#help">Services</a></li>
       <li><a href="#industries">Industries</a></li>
+      <li><a href="#ecosystem">Integrations</a></li>
       <li><a href="#about">About</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Get in touch</a>
@@ -198,6 +225,7 @@ textarea{resize:vertical;min-height:110px}
     <a href="#pain" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Challenges</a>
     <a href="#help" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Services</a>
     <a href="#industries" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Industries</a>
+    <a href="#ecosystem" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Integrations</a>
     <a href="#about" onclick="document.querySelector('.mobile-menu').classList.remove('open')">About</a>
     <a href="#contact" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Get in touch →</a>
   </div>
@@ -342,6 +370,148 @@ textarea{resize:vertical;min-height:110px}
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="eco-wrap" id="ecosystem">
+  <div class="eco-inner">
+    <div class="section-label">Ecosystem integrations</div>
+    <h2>Works with the tools your business already runs on</h2>
+    <p class="section-sub">No rip-and-replace. NexusAI layers AI on top of your existing stack — connecting payments, banking, analytics, operations, and delivery into one intelligent layer.</p>
+    <div class="eco-grid">
+
+      <!-- Payments & POS -->
+      <div class="eco-col">
+        <div class="eco-col-header">
+          <i class="ti ti-credit-card"></i>
+          <span>Payments & POS</span>
+        </div>
+        <div class="eco-items">
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-device-desktop-analytics"></i></div>
+            <div class="eco-item-label">Point of sale</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-device-mobile-payment"></i></div>
+            <div class="eco-item-label">Mobile payments</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-refresh"></i></div>
+            <div class="eco-item-label">Recurring billing</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-credit-card-refund"></i></div>
+            <div class="eco-item-label">Refunds & disputes</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Merchant Banking -->
+      <div class="eco-col">
+        <div class="eco-col-header">
+          <i class="ti ti-building-bank"></i>
+          <span>Merchant banking</span>
+        </div>
+        <div class="eco-items">
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-building-bank"></i></div>
+            <div class="eco-item-label">Bank accounts</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-arrows-exchange"></i></div>
+            <div class="eco-item-label">Reconciliation</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-shield-lock"></i></div>
+            <div class="eco-item-label">Fraud detection</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-chart-line"></i></div>
+            <div class="eco-item-label">Cash flow AI</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Analytics -->
+      <div class="eco-col">
+        <div class="eco-col-header">
+          <i class="ti ti-users"></i>
+          <span>Customer analytics</span>
+        </div>
+        <div class="eco-items">
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-user-search"></i></div>
+            <div class="eco-item-label">Segmentation</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-chart-bar"></i></div>
+            <div class="eco-item-label">Behaviour insights</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-heart-rate-monitor"></i></div>
+            <div class="eco-item-label">Churn prediction</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-star"></i></div>
+            <div class="eco-item-label">Loyalty programs</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payroll & Billing -->
+      <div class="eco-col">
+        <div class="eco-col-header">
+          <i class="ti ti-cash"></i>
+          <span>Payroll & billing</span>
+        </div>
+        <div class="eco-items">
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-cash"></i></div>
+            <div class="eco-item-label">Payroll processing</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-file-invoice"></i></div>
+            <div class="eco-item-label">Bill payments</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-receipt"></i></div>
+            <div class="eco-item-label">Expense tracking</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-calculator"></i></div>
+            <div class="eco-item-label">Tax automation</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery & Ops -->
+      <div class="eco-col">
+        <div class="eco-col-header">
+          <i class="ti ti-truck-delivery"></i>
+          <span>Delivery & ops</span>
+        </div>
+        <div class="eco-items">
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-truck-delivery"></i></div>
+            <div class="eco-item-label">Delivery services</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-map-pin"></i></div>
+            <div class="eco-item-label">Route optimisation</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-package"></i></div>
+            <div class="eco-item-label">Inventory mgmt</div>
+          </div>
+          <div class="eco-item">
+            <div class="eco-icon"><i class="ti ti-bell-ringing"></i></div>
+            <div class="eco-item-label">Order alerts</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="eco-note">Don't see your tool? <span>We integrate with any platform via API.</span> Ask us during your discovery call.</p>
   </div>
 </div>
 
